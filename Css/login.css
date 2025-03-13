@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    background-color: #f7f7f8;;
+    margin: 0;
+    padding: 0;
+}
+
+/* Login Page Layout */
+.login-section {
+    max-width: 140rem;
+    margin: 6rem auto;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Side-by-side layout */
+    gap: 4rem; /* Space between login form & testimonials */
+}
+
+/* Responsive layout: Stack vertically on smaller screens */
+@media screen and (max-width: 1024px) {
+    .login-section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+/* Login Container */
+.login-container {
+    flex: 1; /* Equal space */
+    max-width: 50rem;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 96px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Login Text */
+.login-textbox {
+    text-align: center;
+    width: 100%;
+}
+
+.login-textbox .heading-secondary {
+    font-size: 60.8px;
+    margin-bottom: 1.2rem;
+}
+
+.login-textbox .text-primary {
+    font-size: 28.8px;
+    color: var(--grey-35);
+    margin-bottom: 2.5rem;
+}
+
+/* Login Form */
+.login-form {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.login-form label {
+    font-size: 28.8px;
+    font-weight: 500;
+    color: #262626;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 22.4px;
+    border: 1px solid #f1f1f3;
+    border-radius: 12px;
+    font-size: 25.6px;
+    background-color: #fcfcfd;
+    outline: none;
+}
+.login-checkbox{
+    width: 3%;
+}
+
+/* Login Options */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22.4px;
+    color: var(--grey-35);
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: var(--color-darkorange);
+    font-weight: 500;
+}
+
+/* Login Button */
+.btn-filled {
+    width: 100%;
+    background-color: #f8a93b;
+    color: #fff;
+    padding: 28.8px;
+    border-radius: 12px;
+    font-size: 28.8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* OR Separator */
+.or-separator {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 28.8px;
+    color: var(--grey-35);
+}
+
+/* Google Login Button */
+.google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-sm);
+    background-color: #f7f7f8;;
+    padding: 28.8px;
+    border: 1px solid #f1f1f3;
+    border-radius: 12px;
+    font-size: 28.8px;
+    text-decoration: none;
+    color: #262626;
+    width: 100%;
+}
+
+.google-login img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Sign-up Text */
+.register-text {
+    text-align: center;
+    font-size: 28.8px;
+    color: var(--grey-35);
+    margin-top: 2rem;
+}
+
+.register-text a {
+    color: var(--color-darkorange);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Testimonials Section */
+.testimonial-section {
+    flex: 1; /* Takes equal space */
+    max-width: 50rem;
+}
+
+
+
+/* Testimonial Content */
+.testimonial-heading {
+    font-size: 60.8px;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 28.8px;
+    color: var(--grey-35);
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Testimonial Footer (Profile + Button) */
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+/* Profile Image */
+.testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Read More Button */
+.testimonial-btn {
+    background-color: #f1f1f3;
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+    font-size: 25.6px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #262626;
+    border: 1px solid var(--white-90);
+}
+
+@media screen and (max-width: 768px) {
+    .login-section {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 3rem; /* Maintain spacing */
+    }
+
+    .login-container {
+        order: 1; /* Login form appears first */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .testimonial-section {
+        order: 2; /* Testimonials appear below */
+        width: 100%; /* Full width for better readability */
+    }
+
+    .testimonial-heading,
+    .testimonial-text {
+        text-align: center; /* Center-align text for mobile layout */
+    }
+
+    .testimonial-card {
+        text-align: left; /* Keep text left-aligned for readability */
+        padding: 1.5rem;
+    }
+
+    .testimonial-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .testimonial-img {
+        width: 40px;
+        height: 40px;
+    }
+}
